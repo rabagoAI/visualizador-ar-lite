@@ -1,0 +1,55 @@
+---
+// Importamos el componente de React Uploader.jsx
+import Uploader from '../components/Uploader.jsx'; 
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Visualizador AR Lite DIY</title>
+    <style>
+        body { 
+            margin: 0; 
+            font-family: sans-serif; 
+            background-color: #f0f0f0; 
+        }
+        .container { 
+            max-width: 900px; 
+            margin: 20px auto; 
+            padding: 20px; 
+            background-color: white; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+        }
+        h1 { 
+            text-align: center; 
+            color: #333; 
+        }
+        .instructions { 
+            background-color: #e9e9e9; 
+            padding: 15px; 
+            border-radius: 8px; 
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🛠️ Visualizador AR Lite de Productos DIY</h1>
+        <p>Sube tu modelo 3D (.glb o .gltf) y previsualiza cómo se verá en 3D interactivo.</p>
+        
+        <Uploader client:only="react" />
+
+        <div class="instructions">
+            <h3>Próximos Pasos (Implementación de AR):</h3>
+            <p>Ya que la carga 3D funciona, modificaremos el código de **<code>ThreeDViewer.jsx</code>** para:</p>
+            <ol>
+                <li>Añadir un botón que inicie la sesión de Realidad Aumentada.</li>
+                <li>Utilizar el módulo de **WebXR** de Three.js para proyectar el modelo 3D sobre el *feed* de la cámara del móvil.</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
